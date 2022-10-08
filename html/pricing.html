@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Double A Detailing is mobile car wash and auto detailing company. You can schedule appointments for car, truck, and motorcycle washes.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../css/stylePricing.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans" rel="stylesheet">
+
+    <title> Double A - Pricing </title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"> </script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <meta name="format-detection" content="telephone=no">
+    <script>
+      $(document).ready(function(){
+        $('input[type="radio"]').click(function(){
+          var inputValue = $(this).attr("value");
+          var targetBox =$("."+inputValue);
+          $(".box").not(targetBox).hide();
+          $(targetBox).show();
+          })
+        })
+    </script>
+    <link rel="stykesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+</head>
+<body>
+  <!-- ========== HEADER ========== -->
+  <header>
+    <nav>
+      <div class="blueheader">
+        <div class="contactTop">
+          <div class="topIcon"> <i class="fa fa-envelope"> </i></div>
+          <div class="contactHeaderInfo">doubleadetailing@gmail.com</div> 
+          |
+          <div class="phoneIcon"> <i class="fa fa-phone"> </i></div>
+          <div class="contactHeaderInfo">714-478-0556</div> 
+        </div>
+      </div>
+      <input id="nav-toggle" type="checkbox">
+      <a href="../html/index.html"> 
+        <img src="../images/UPDATE - Double A Detailing Logo.png" alt="DoubleADetailing Logo" class="logoImage"> 
+      </a>
+      <!-- <div class="logo">DOUBLE A DETAILING</div> -->
+      <ul class="links">
+        <li><a class='active' href="../html/pricing.html">Pricing</a></li>
+        <li><a href="../html/gallery.html">Gallery</a></li>
+        <li><a href="../html/aboutus.html">About</a></li>
+        <li><a href="../html/contact.html">Contact</a></li>
+        <li><a href="../html/faq.html">FAQ</a></li>
+        <li><a href="https://DoubleADetailing.as.me/">Book Now</a></li>
+      </ul>
+      <label for="nav-toggle" class="icon-burger">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </label>
+    </nav>
+  </header>
+
+  <!-- ========== MAIN ========== -->
+  <main> 
+    <!-- ========== HERO ==========-->
+    <div class="hero-image">
+      <div class="hero-text">
+        <h1> Pricing and Packages </h1>
+      </div>
+    </div>
+
+   <!-- ========== INTRO TEXT==========-->
+    <div class = "container" data-aos="fade-up">
+      <h2 class ="sectionHeadingTitle"> Fast Reliable Service, Always High Quality</h2>
+      <p class="sectionDescription"> Select your car type and a package below to discover what we offer. </p>
+    </div>
+
+    
+    
+    <!-- ========== CAR SELECTION ==========-->
+    <section class="container" >
+      <div class="row-item">  
+
+        <!-- ========== REGULAR CAR ==========--> 
+        <div class="feature-card"> 
+          <input type="radio" name="colorRadio" id="car" value="one" checked>
+          <label class="card-styles" for="car">
+            <i class="fas fa-car pricing_icon"></i>
+            <p class="button-label"> Regular Car </p>
+          </label>
+        </div>
+
+         <!-- ========== TRUCK & SUV ==========-->
+        <div class="feature-card"> 
+          <input type="radio" name="colorRadio" id="truck" value="two" >
+          <label class="card-styles" for="truck">
+            <i class="fas fa-truck-pickup pricing_icon"></i>
+            <p>Truck & SUV</p>
+          </label>
+        </div>
+
+         <!-- ========== MOTORCYCLE ==========-->
+        <div class="feature-card"> 
+          <input type="radio" name="colorRadio" value="three" id="bus">
+          <label class="card-styles" for="bus" data-radio="radio_3">
+            <i class="fas fa-motorcycle pricing_icon"></i>
+            <p> Motorcycle </p>
+          </label>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ========== PRICING CARDS ==========-->
+    <div class="" id="myRadioGroup">
+      <div class="card-container" >
+       <!-- ========== REGULAR CAR PRICING CARD ==========--> 
+        <div class="pricing-container box one first" >
+          <div class="pricing-table">
+            <div class="pricing-card">
+              <div class="top-card header-express">
+                <i class="gold_car fas fa-car "></i>
+                <div class="pricing-card-header">Car - Regular Wash</div>
+                <div class="price">$30</div>
+                <div class="timeEstimate">30 min</div>
+              </div>
+              <ul class="feature_list">
+                <li class="feature">
+                  <img src="../images/black check.png">
+                    Full exterior hand wash
+                </li>
+                <li class="feature">
+                  <img src="../images/black check.png">
+                    Tire dressing & rim cleaning
+                </li>
+                <li class="feature">
+                  <img src="../images/black check.png">
+                    Exterior window cleaning
+                </li>
+                <li class="feature">
+                  <img src="../images/black check.png">
+                    Interior vacuum
+                </li>
+                <li class="feature">
+                  <img src="../images/black check.png">
+                    Door jambs cleaning
+                </li>
+                <li class="feature">
+                  <img src="../images/black check.png">
+                    Window cleaning inside
+                </li>
+                <li class="feature">
+                  <img src="../images/black check.png">
+                    Glossy exterior finish
+                </li>
+              </ul>
+              <a href="https://DoubleADetailing.as.me/?appointmentType=19793290" class="order-btn">Order Now</a>
+            </div>
+
+            <div class="pricing-card">
+              <div class="top-card header-washwax">
+                <i class="gold_car fas fa-car "></i>
+                <div class="pricing-card-header">Car - Wash & Wax Detail</div>
+                <div class="price">$80</div>
+                <div class="timeEstimate">30 min</div>
+              </div>
+              <ul class="feature_list">
+                <li class="feature">
+                  <img src="../images/black check.png">
+                    Full exterior hand wash
+                </li>
+                <li class="feature">
+                  <img src="../images/black check.png">
+                    Tire dressing & rim cleaning
+                </li>
+                <li class="feature">
+                  <img src="../images/black check.png">
+                    Exterior window cleaning
+                </li>
+                <li class="feature">
+                  <img src="../images/black check.png">
+                    Door jambs cleaning
+                </li>
+                <li class="feature">
+                  <img src="../images/black check.png">
+                    Glossy exterior finish
+                </li>
+                <li class="feature">
+                  <img src="../images/black check.png">
+                    Complete wax
+                </li>
+                <li class="feature">
+                  <img src="../images/black check.png">
+                    Clay bar paint treatment
+                </li>
+                <li class="feature">
+                  <img src="../images/black check.png">
+                    Light stain removal
+                  </li>
+              </ul>
+              <a href="https://DoubleADetailing.as.me/?appointmentType=21664044" class="order-btn">Order Now</a>
+            </div>
+
+            <div class="pricing-card">
+              <div class="top-card header-interior">
+                <i class="gold_car fas fa-car "></i>
+                <div class="pricing-card-header">Car - Interior Only</div>
+                <div class="price">$80</div>
+                <div class="timeEstimate">30 min</div>
+              </div>
+              <ul class="feature_list">
+                <li class="feature">
+                  <img src="../images/black check.png">
+                    Exterior window cleaning
+                </li>
+                <li class="feature">
+                  <img src="../images/black check.png">
+                    Interior vacuum
+                </li>
+                <li class="feature">
+                  <img src="../images/black check.png">
+                    Door jambs cleaning
+                </li>
+                <li class="feature">
+                  <img src="../images/black check.png">
+                    Glossy exterior finish
+                </li>
+                <li class="feature">
+                  <img src="../images/black check.png">
+                    Leather cleaning
+                </li>
+                <li class="feature">
+                  <img src="../images/black check.png">
+                    Mats & carpets shampooed
+                </li>
+                <li class="feature">
+                  <img src="../images/black check.png">
+                    Plastic dressing inside
+                </li>
+              </ul>
+              <a href="https://DoubleADetailing.as.me/?appointmentType=21664072" class="order-btn">Order Now</a>
+            </div>
+      
+            <div class="pricing-card gold">
+              <div class="top-card header-premium">
+                <i class="gold_car fas fa-car "></i>
+                <div class="pricing-card-header gold">Car - Full Detail</div>
+                <div class="price gold">$120</div>
+                <div class="timeEstimate">60-75 min</div>
+              </div>
+              <ul class="feature_list">
+                <li class="feature gold">
+                  <img src="../images/black check.png">
+                  Full exterior hand wash
+                </li>
+                <li class="feature gold">
+                  <img src="../images/black check.png">
+                    Tire dressing & rim cleaning
+                </li>
+                <li class="feature gold">
+                  <img src="../images/black check.png">
+                    Exterior window cleaning
+                </li>
+                <li class="feature gold">
+                  <img src="../images/black check.png">
+                      Interior vacuum
+                </li>
+                <li class="feature gold">
+                  <img src="../images/black check.png">
+                    Door jambs cleaning
+                </li>
+                <li class="feature gold">
+                  <img src="../images/black check.png">
+                    Complete wax
+                </li>
+                <li class="feature gold">
+                  <img src="../images/black check.png">
+                    Leather cleaning
+                </li>
+                <li class="feature gold">
+                  <img src="../images/black check.png">
+                    Ligh stain removal
+                </li>
+                <li class="feature gold">
+                  <img src="../images/black check.png">
+                    Clay bar paint treatment
+                </li>
+                <li class="feature gold">
+                  <img src="../images/black check.png">
+                    Water spot removal
+                </li>
+                <li class="feature gold">
+                  <img src="../images/black check.png">
+                    Outside plastic dressing
+                </li>
+                <li class="feature gold">
+                  <img src="../images/black check.png">
+                    Mats & carpets shampooed
+                </li>
+                <li class="feature gold">
+                  <img src="../images/black check.png">
+                    Plastic dressing inside
+                </li>
+              </ul>
+              <a href="https://DoubleADetailing.as.me/?appointmentType=19793371" class="order-btn gold">Order Now</a>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- ========== TRUCK & SUV PRICING CARD ==========-->
+        <div class="pricing-container box two">
+          <div class="pricing-table">
+            <div class="pricing-card car">
+              <div class="top-card header-express">
+                <i class="gold_car fas fa-truck-pickup pricing_icon"></i>
+                <div class="pricing-card-header">Truck/SUV - Regular Wash</div>
+                <div class="price">$40</div>
+                <div class="timeEstimate">40-60 min</div>
+              </div>
+              <ul class="feature_list">
+                <li class="feature">
+                  <img src="../images/black check.png">
+                    Full exterior hand wash
+                </li>
+                <li class="feature">
+                  <img src="../images/black check.png">
+                    Tire dressing & rim cleaning
+                </li>
+                <li class="feature">
+                  <img src="../images/black check.png">
+                    Exterior window cleaning
+                </li>
+                <li class="feature">
+                  <img src="../images/black check.png">
+                      Interior vacuum
+                </li>
+                <li class="feature">
+                  <img src="../images/black check.png">
+                    Door jambs cleaning
+                </li>
+                <li class="feature">
+                  <img src="../images/black check.png">
+                    Window cleaning inside
+                </li>
+                <li class="feature">
+                  <img src="../images/black check.png">
+                    Glossy exterior finish
+                </li>
+              </ul>
+              <a href="https://DoubleADetailing.as.me/?appointmentType=19793383" class="order-btn">Order Now</a>
+            </div>
+
+            <div class="pricing-card car">
+              <div class="top-card header-washwax">
+                <i class="gold_car fas fa-truck-pickup pricing_icon"></i>
+                <div class="pricing-card-header">Truck/SUV - Wash & Wax Detail</div>
+                <div class="price">$80</div>
+                <div class="timeEstimate">40-60 min</div>
+              </div>
+              <ul class="feature_list">
+                <li class="feature">
+                  <img src="../images/black check.png">
+                    Full exterior hand wash
+                </li>
+                <li class="feature">
+                  <img src="../images/black check.png">
+                    Tire dressing & rim cleaning
+                </li>
+                <li class="feature">
+                  <img src="../images/black check.png">
+                    Exterior window cleaning
+                </li>
+                <li class="feature">
+                  <img src="../images/black check.png">
+                      Interior vacuum
+                </li>
+                <li class="feature">
+                  <img src="../images/black check.png">
+                    Door jambs cleaning
+                </li>
+                <li class="feature">
+                  <img src="../images/black check.png">
+                    Window cleaning inside
+                </li>
+                <li class="feature">
+                  <img src="../images/black check.png">
+                    Glossy exterior finish
+                </li>
+              </ul>
+              <a href="https://DoubleADetailing.as.me/?appointmentType=21664113" class="order-btn">Order Now</a>
+            </div>
+
+
+            <div class="pricing-card car">
+              <div class="top-card header-interior">
+                <i class="gold_car fas fa-truck-pickup pricing_icon"></i>
+                <div class="pricing-card-header">Truck/SUV - Interior Only</div>
+                <div class="price">$80</div>
+                <div class="timeEstimate">40-60 min</div>
+              </div>
+              <ul class="feature_list">
+                <li class="feature">
+                  <img src="../images/black check.png">
+                    Full exterior hand wash
+                </li>
+                <li class="feature">
+                  <img src="../images/black check.png">
+                    Tire dressing & rim cleaning
+                </li>
+                <li class="feature">
+                  <img src="../images/black check.png">
+                    Exterior window cleaning
+                </li>
+                <li class="feature">
+                  <img src="../images/black check.png">
+                      Interior vacuum
+                </li>
+                <li class="feature">
+                  <img src="../images/black check.png">
+                    Door jambs cleaning
+                </li>
+                <li class="feature">
+                  <img src="../images/black check.png">
+                    Window cleaning inside
+                </li>
+                <li class="feature">
+                  <img src="../images/black check.png">
+                    Glossy exterior finish
+                </li>
+              </ul>
+              <a href="https://DoubleADetailing.as.me/?appointmentType=21664168" class="order-btn">Order Now</a>
+            </div>
+          
+            <div class="pricing-card gold">
+              <div class="top-card header-premium">
+                <i class="gold_car fas fa-truck-pickup"></i>
+                <div class="pricing-card-header gold">Truck/SUV - Full Detail</div>
+                <div class="price gold">$190</div>
+                <div class="timeEstimate">60-75 min</div>
+              </div>
+              <ul class="feature_list">
+                <li class="feature gold">
+                  <img src="../images/black check.png">
+                  Full exterior hand wash
+                </li>
+                <li class="feature gold">
+                  <img src="../images/black check.png">
+                    Tire dressing & rim cleaning
+                </li>
+                <li class="feature gold">
+                  <img src="../images/black check.png">
+                    Exterior window cleaning
+                </li>
+                <li class="feature gold">
+                  <img src="../images/black check.png">
+                      Interior vacuum
+                </li>
+                <li class="feature gold">
+                  <img src="../images/black check.png">
+                    Door jambs cleaning
+                </li>
+                <li class="feature gold">
+                  <img src="../images/black check.png">
+                    Complete wax
+                </li>
+                <li class="feature gold">
+                  <img src="../images/black check.png">
+                    Leather cleaning
+                </li>
+                <li class="feature gold">
+                  <img src="../images/black check.png">
+                    Ligh stain removal
+                </li>
+                <li class="feature gold">
+                  <img src="../images/black check.png">
+                    Clay bar paint treatment
+                </li>
+                <li class="feature gold">
+                  <img src="../images/black check.png">
+                    Water spot removal
+                </li>
+                <li class="feature gold">
+                  <img src="../images/black check.png">
+                    Outside plastic dressing
+                </li>
+                <li class="feature gold">
+                  <img src="../images/black check.png">
+                    Mats & carpets shampooed
+                </li>
+                <li class="feature gold">
+                  <img src="../images/black check.png">
+                    Plastic dressing inside
+                </li>
+              </ul>
+              <a href="https://DoubleADetailing.as.me/?appointmentType=19793388" class="order-btn gold">Order Now</a>
+            </div>
+          </div>
+        </div>
+
+
+
+        <!-- ========== MOTORCYLE ==========-->
+        <div class="pricing-container box three">
+          <div class="pricing-table">
+            <div class="pricing-card car">
+              <div class="top-card header-express">
+                <i class="gold_car fas fa-motorcycle"></i>
+                <div class="pricing-card-header">Motorcycle - Regular Wash</div>
+                <div class="price">$30</div>
+                <div class="timeEstimate">30 min</div>
+              </div>
+              <ul class="feature_list">
+                <li class="feature">
+                  <img src="../images/black check.png">
+                    Full exterior hand wash
+                </li>
+                <li class="feature">
+                  <img src="../images/black check.png">
+                    Tire dressing & rim cleaning
+                </li>
+                <li class="feature">
+                  <img src="../images/black check.png">
+                    Exterior window cleaning
+                </li>
+                <li class="feature">
+                  <img src="../images/black check.png">
+                    Glossy exterior finish
+                </li>
+              </ul>
+              <a href="https://DoubleADetailing.as.me/?appointmentType=22413325" class="order-btn">Order Now</a>
+            </div>
+      
+            <div class="pricing-card gold">
+              <div class="top-card header-premium">
+                <i class="gold_car fas fa-motorcycle"></i>
+                <div class="pricing-card-header gold">Motorcycle - Full Detail</div>
+                <div class="price gold">$100</div>
+                <div class="timeEstimate">60 min</div>
+              </div>
+              <ul class="feature_list">
+                <li class="feature gold">
+                  <img src="../images/black check.png">
+                  Full exterior hand wash
+                </li>
+                <li class="feature gold">
+                  <img src="../images/black check.png">
+                    Tire dressing & rim cleaning
+                </li>
+                <li class="feature gold">
+                  <img src="../images/black check.png">
+                    Exterior window cleaning
+                </li>
+                <li class="feature gold">
+                  <img src="../images/black check.png">
+                    Glossy exterior finish
+                </li>
+                <li class="feature gold">
+                  <img src="../images/black check.png">
+                    Complete wax
+                </li>
+                <li class="feature gold">
+                  <img src="../images/black check.png">
+                    Leather cleaning
+                </li>
+                <li class="feature gold">
+                  <img src="../images/black check.png">
+                    Ligh stain removal
+                </li>
+                <li class="feature gold">
+                  <img src="../images/black check.png">
+                    Clay bar paint treatment
+                </li>
+                <li class="feature gold">
+                  <img src="../images/black check.png">
+                    Water spot removal
+                </li>
+              </ul>
+              <a href="https://DoubleADetailing.as.me/?appointmentType=22413404" class="order-btn gold">Order Now</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+
+    <!-- ========== ADDITIONAL SERVICES ==========-->
+    <div class="grey" > 
+      <div class = "container" data-aos="fade-up">
+        <h2 class="sectionHeading"> Additional Services </h2>
+        <div class ="corporateOffer">Pricing for these services will be dependent on size and condition of vehicles.</div>
+        <div class="service-row">
+          <div class="service-card">
+            <div class="additionalService-icon">
+              <img class="" src="../images/boat.png" alt="Image of a boat">
+            </div>
+            <p class="additionalService-header">
+              Boats
+            </p>
+            <div class="additionalService-body">
+            </div>
+          </div>
+
+          <div class="service-card">
+            <div class="additionalService-icon">
+              <img class="additionalService" src="../images/limousine.png" alt="Image of a limousine">
+            </div>
+            <p class="additionalService-header">
+              Limos
+            </p>
+            <div class="additionalService-body">
+            </div>
+          </div>
+
+          <div class="service-card">
+            <div class="additionalService-icon">
+              <img class="additionalService" src="../images/camper.png" alt="Image of an RV">
+            </div>
+            <p class="additionalService-header">
+              RVs
+            </p>
+            <div class="additionalService-body">
+            </div>
+         </div>
+
+      <!-- ========== NEXT ROW ==========-->
+          <div class="service-card">
+            <div class="additionalService-icon">
+              <img class="" src="../images/bus.png" alt="Image of a bus">
+            </div>
+            <p class="additionalService-header">
+              Shuttle Busses
+            </p>
+            <div class="additionalService-body">
+            </div>
+          </div>
+
+          <div class="service-card">
+            <div class="additionalService-icon">
+              <img class="additionalService" src="../images/trailer.png" alt="Image of a semi-truck">
+            </div>
+            <p class="additionalService-header">
+              Semi-Trucks
+            </p>
+            <div class="additionalService-body">
+            </div>
+          </div>
+
+          <div class="service-card">
+            <div class="additionalService-icon">
+              <img class="additionalService" src="../images/golf-cart.png" alt="Image of a golf cart">
+            </div>
+            <p class="additionalService-header">
+              Golf Carts
+            </p>
+            <div class="additionalService-body">
+            </div>
+          </div>
+        </div>
+        <div class="spacing"></div>
+        <div class="bluestyles internal_link"><a href="contact.html">Contact us to get a free quote </a></div>
+      </div>  
+    </div>
+
+
+    <!-- ========== CONTACT US ==========-->
+    <section class = "container" data-aos="fade-up">
+      <h2 class ="sectionHeading">Fleet Services</h2>
+      <div class ="corporateOffer">Are you looking for a corporate or grouping offer? Request a custom quote.</div>
+      <div class="bluestyles internal_link"><a href="contact.html"> Contact us for more information </a> </div>
+    </section>
+
+    <!-- ========== NUMBER TILE ==========-->
+    <section class="number">
+      <div class="white"> CALL 714-478-0556 </div>
+    </section>
+
+  </main>
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer">
+    <div class="footer-left">
+      <a href="index.html"> <img src="../images/UPDATE - White Double A Detailing Logo.png" alt="Double A Detailing Logo"> </a>
+      <h2 class="footer_header">SOCIAL LINKS</h2>
+      <!-- <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda, molestias id? Dolorem, excepturi omnis asperiores officiis aperiam beatae tenetur dicta error id neque labore perspiciatis necessitatibus iusto dignissimos! Sunt, consequatur?</p> -->
+      <a class="socialTop" href="#"><i class="fab fa-facebook-square" style="font-size:2em; background:#364a62; padding:10px 12px;"></i></a>
+      <a class="socialTop" href="#"><i class="fab fa-instagram-square" style="font-size:2em; background:#364a62; padding:10px 12px;"></i></a>
+      <a class="socialTop" href="#"><i class="fab fa-twitter-square" style="font-size:2em; background:#364a62; padding:10px 12px;"></i></a>
+    </div>
+    <ul class="footer-right">
+      <li>
+        <h2 class="footer_header">QUICK LINKS</h2>
+        <ul class="footer-box">
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./pricing.html">Pricing</a></li>
+          <li><a href="./aboutus.html">About Us</a></li>
+          <li><a href="./contact.html">Contact Us</a></li>
+          <li><a href="./faq.html">FAQ</a></li>
+          <li><a href="https://DoubleADetailing.as.me/">Book Now</a></li>
+        </ul>
+      </li>
+      <li class="features"> 
+        <h2 class="footer_header">CONTACT US</h2>
+        <ul class="footer-box">
+          <li><a href="#">doubleadetailing@gmail.com</a></li>
+          <li><a href="#">714-478-0556</a></li>
+          <li><a href="./contact.html">Online Form</a></li>
+        </ul>
+      </li>
+      <li>
+        <h2 class="footer_header">HOURS</h2>
+        <ul class="footer-box">
+          <li>Monday - Sunday</li>
+          <li>6:00am-6:00pm</li>
+        </ul>
+      </li>
+    </ul>
+    
+    <div class="footer-bottom">
+      <p>All Rights Reserved by Double A Detailing 2021</p>
+    </div>
+  </footer>
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+      <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+      <script>
+        AOS.init({
+            duration: 2000
+        });
+      </script>
+</body>
+</html>
