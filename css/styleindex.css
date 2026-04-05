@@ -125,6 +125,72 @@ a {
   padding: 0 10%;
 }
 
+.hero-header {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 12;
+}
+
+.hero-header .blueheader {
+  display: block;
+}
+
+.hero-nav {
+  background: transparent;
+  box-shadow: none;
+  height: 100px;
+  top: 30px;
+  transition: background 0.15s ease, box-shadow 0.15s ease;
+}
+
+.hero-nav .links {
+  width: 60%;
+  padding: 0 5%;
+  align-items: center;
+}
+
+.hero-nav .links a {
+  color: #111827;
+  font-weight: 600;
+  text-shadow: none;
+}
+
+.hero-nav .links a.book-now {
+  background: #3a7bff;
+  color: #fff;
+  box-shadow: 0 10px 20px rgba(34, 96, 255, 0.28);
+  padding: 10px 22px;
+  border-radius: 999px;
+  font-weight: 700;
+  text-shadow: none;
+}
+
+.hero-header .logoImage {
+  top: 52%;
+  transform: translateY(-50%);
+}
+
+@media (min-width: 721px) {
+  .hero-header .logoImage {
+    top: 42%;
+  }
+}
+
+body.nav-scrolled .hero-nav {
+  background: #ffffff;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.12);
+}
+
+body.nav-scrolled .hero-nav .links a {
+  color: #111827;
+}
+
+body.nav-open .sticky-cta {
+  display: none;
+}
+
 ul {
   list-style-type: none;
 }
@@ -141,6 +207,7 @@ nav {
   background-color: #fff;
   box-shadow: 0 0 8px #888888;
 }
+
 
 nav .logo {
   float: left;
@@ -264,17 +331,26 @@ nav .icon-burger .line {
 
 .hero {
   position: relative;
-  min-height: 82vh;
+  min-height: 90vh;
   display: grid;
   align-items: stretch;
+  padding-top: 100px;
 }
 
 .hero-media {
   position: absolute;
   inset: 0;
-  background: linear-gradient(var(--hero-overlay), var(--hero-overlay)),
-    url("../images/heroimage-1.jpg") center/cover no-repeat;
+  background: #000 url("../images/anaheim hero 4.png") center 65%/cover no-repeat;
+  overflow: hidden;
 }
+
+.hero-media::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(3, 20, 40, 0.08), rgba(3, 20, 40, 0.35));
+}
+
 
 .hero-content {
   position: relative;
@@ -282,19 +358,38 @@ nav .icon-burger .line {
   color: var(--white);
   width: min(1140px, 92vw);
   margin: 0 auto;
-  padding: 120px 0 90px;
+  padding: 120px 0 40px;
+}
+
+.hero-content.center {
+  text-align: center;
+  display: grid;
+  justify-items: center;
+}
+
+.hero-content-top {
+  padding-top: 50px;
 }
 
 .hero h1 {
   font-family: var(--font-display);
-  font-size: clamp(2.6rem, 4vw, 3.8rem);
-  margin-bottom: 16px;
+  font-size: clamp(2.4rem, 3.8vw, 3.6rem);
+  margin-bottom: 4px;
+  color: #ffffff;
+  font-weight: 800;
+  text-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
 }
 
 .hero .lead {
-  font-size: 1.2rem;
+  font-size: 1.05rem;
   max-width: 560px;
-  color: rgba(255, 255, 255, 0.88);
+  color: #ffffff;
+  margin-top: 0;
+  font-weight: 700;
+  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
+  transform: none;
+  margin-top: 10px;
+  line-height: 1.4;
 }
 
 .hero-cta {
@@ -302,6 +397,53 @@ nav .icon-burger .line {
   display: flex;
   flex-wrap: wrap;
   gap: 16px;
+}
+
+.hero-buttons {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin: 240px auto 20px;
+  width: min(560px, 92vw);
+}
+
+.hero-button {
+  width: 240px;
+  height: 64px;
+  border-radius: 18px;
+  font-size: 18px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18);
+  transition: all 0.2s ease;
+}
+
+.hero-button.primary {
+  background: #3b82f6;
+  color: #ffffff;
+}
+
+.hero-button.primary:hover {
+  background: #2563eb;
+  transform: translateY(-2px);
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.22);
+}
+
+.hero-button.secondary {
+  background: rgba(255, 255, 255, 0.95);
+  color: #111827;
+  border: 1.5px solid rgba(255, 255, 255, 0.35);
+  backdrop-filter: blur(10px);
+}
+
+.hero-button.secondary:hover {
+  background: #ffffff;
+  transform: translateY(-2px);
 }
 
 .hero-trust {
@@ -482,6 +624,30 @@ nav .icon-burger .line {
 }
 
 @media (max-width: 720px) {
+  body.nav-open .sticky-cta {
+    display: none !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+  }
+  .blueheader {
+    display: none !important;
+    height: 0 !important;
+    padding: 0 !important;
+    overflow: hidden !important;
+  }
+  .blueheader {
+    display: none;
+  }
+
+  body.nav-scrolled .hero-nav {
+    background: #fff;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.12);
+  }
+
+  body.nav-scrolled .hero-nav .icon-burger .line {
+    background-color: #000;
+    height: 3px;
+  }
   .service-map-card iframe {
     height: 320px;
   }
@@ -1139,6 +1305,12 @@ nav .icon-burger .line {
   }
 }
 
+@media (min-width: 1100px) {
+  .hero .lead {
+    margin-top: 12px;
+  }
+}
+
 @media (max-width: 600px) {
   .menu-media {
     min-height: 190px;
@@ -1160,6 +1332,35 @@ nav .icon-burger .line {
 }
 
 @media (max-width: 720px) {
+  .hero-header {
+    position: fixed;
+  }
+
+  .hero {
+    padding-top: 90px;
+  }
+
+  .hero-nav {
+    background: transparent;
+    box-shadow: none;
+    top: 0;
+  }
+
+  .hero-nav .links a,
+  .hero-nav .links a.book-now {
+    color: #fff;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.35);
+  }
+
+  body.nav-scrolled .hero-nav .links a,
+  body.nav-scrolled .hero-nav .links a.book-now {
+    color: #fff;
+  }
+
+  .hero-nav .icon-burger .line {
+    background-color: #fff;
+  }
+
   nav {
     position: fixed;
     z-index: 10;
@@ -1229,6 +1430,7 @@ nav .icon-burger .line {
     display: none;
   }
 
+
   .logoImage {
     width: 175px;
     position: absolute;
@@ -1244,8 +1446,44 @@ nav .icon-burger .line {
     padding: 90px 0 60px;
   }
 
+  .hero-content-top {
+    padding-top: 60px;
+  }
+
+  .hero h1 {
+    font-size: clamp(1.9rem, 7.4vw, 2.6rem);
+    line-height: 1.1;
+  }
+
+  .hero .lead {
+    transform: none;
+    margin-top: 8px;
+    font-size: 0.98rem;
+    line-height: 1.35;
+  }
+
+  .hero-bar {
+    flex-direction: column;
+    border-radius: 20px;
+    margin-top: 120px;
+  }
+
+  .hero-buttons {
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+    margin-top: 40px;
+  }
+
+  .hero-button {
+    width: min(180px, 44vw);
+    height: 56px;
+    font-size: 16px;
+  }
+
+
   .hero-trust {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
   }
 }
 
