@@ -1265,3 +1265,44 @@ input[type="checkbox"]:checked + .addonBtn{
 .addonImage{
     margin-top:10px;
 }
+
+/* mobile-topbar-hide */
+
+@media (max-width: 720px) {
+  .topbar,
+  .blueheader {
+    display: none;
+  }
+}
+
+
+
+
+
+/* mobile-nav-hide-until-toggle */
+@media screen and (max-width: 768px) {
+  nav .links {
+    display: none;
+  }
+  #nav-toggle:checked ~ .links {
+    display: flex;
+  }
+}
+
+/* book-now-button */
+@media (min-width: 769px) {
+  nav .links a.book-now {
+    background: linear-gradient(135deg, #3a7bff, #2aa8ff);
+    color: #fff;
+    padding: 12px 28px;
+    border-radius: 999px;
+    font-weight: 700;
+    box-shadow: 0 10px 20px rgba(34, 96, 255, 0.28);
+  }
+
+  nav .links a.book-now:hover,
+  nav .links a.book-now:focus {
+    border-bottom: 2px solid transparent;
+    transform: translateY(-1px);
+  }
+}
