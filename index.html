@@ -12,18 +12,18 @@
     <meta name="format-detection" content="telephone=no">
     <title>Double A Detailing - Premium Mobile Detailing in Orange County</title>
   </head>
-  <body>
-    <header>
-      <nav>
-        <div class="blueheader">
-          <div class="contactTop">
-            <div class="topIcon"><i class="fa fa-envelope"></i></div>
-            <div class="contactHeaderInfo">doubleadetailing@gmail.com</div>
-            |
-            <div class="phoneIcon"><i class="fa fa-phone"></i></div>
-            <div class="contactHeaderInfo">714-478-0556</div>
-          </div>
+<body class="hero-variant-floating">
+    <header class="hero-header">
+      <div class="blueheader">
+        <div class="contactTop">
+          <div class="topIcon"><i class="fa fa-envelope"></i></div>
+          <div class="contactHeaderInfo">doubleadetailing@gmail.com</div>
+          |
+          <div class="phoneIcon"><i class="fa fa-phone"></i></div>
+          <div class="contactHeaderInfo">714-478-0556</div>
         </div>
+      </div>
+      <nav class="hero-nav">
         <input id="nav-toggle" type="checkbox" tabindex="0">
         <a href="index.html" tabindex="0">
           <img src="images/update - double a detailing logo.png" alt="Double A Detailing logo" class="logoImage">
@@ -42,36 +42,21 @@
           <div class="line"></div>
         </label>
       </nav>
-    </header>
+  </header>
 
     <main>
 
-      <section class="hero" aria-label="Premium mobile detailing">
-        <div class="hero-media" role="img" aria-label="Detailing service on a clean vehicle"></div>
-        <div class="hero-content">
-          <p class="eyebrow">Orange County Mobile Detailing</p>
-          <h1>Premium mobile detailing that comes to you.</h1>
+      <section class="hero hero-skyline" aria-label="Premium mobile detailing">
+        <div class="hero-media" aria-label="Orange County skyline with vehicle"></div>
+        <div class="hero-content center hero-content-top">
+          <h1>Mobile Car Wash &amp; Auto Detailing</h1>
           <p class="lead">
-            We come to your home or office with everything needed for a premium detail. Clear pricing. Easy booking. Exceptional results.
+            <strong>100%</strong> hand wash where we come to your home or business
           </p>
-          <div class="hero-cta">
-            <a class="btn btn-primary" href="https://DoubleADetailing.as.me/">Book Now</a>
-            <a class="btn btn-secondary" href="html/pricing.html">View Pricing</a>
-          </div>
-          <div class="hero-trust">
-            <div class="trust-item">
-              <i class="fas fa-map-marker-alt"></i>
-              <span>We come to you</span>
-            </div>
-            <div class="trust-item">
-              <i class="fas fa-shield-alt"></i>
-              <span>Licensed & insured</span>
-            </div>
-            <div class="trust-item">
-              <i class="fas fa-star"></i>
-              <span>Locally trusted in OC</span>
-            </div>
-          </div>
+        </div>
+        <div class="hero-buttons">
+          <a class="hero-button primary" href="https://DoubleADetailing.as.me/">Book Now</a>
+          <a class="hero-button secondary" href="tel:7144780557">Call (714) 478‑0557</a>
         </div>
       </section>
 
@@ -496,6 +481,27 @@
       });
       updateSticky();
       updateFeatureToggles();
+    </script>
+    <script>
+      const hero = document.querySelector('.hero');
+      const navScrollToggle = () => {
+        if (!hero) return;
+        const heroBottom = hero.getBoundingClientRect().bottom;
+        document.body.classList.toggle('nav-scrolled', window.scrollY > 1);
+      };
+      window.addEventListener('scroll', navScrollToggle);
+      window.addEventListener('resize', navScrollToggle);
+      navScrollToggle();
+
+      const navToggle = document.getElementById('nav-toggle');
+      const syncNavOpen = () => {
+        if (!navToggle) return;
+        document.body.classList.toggle('nav-open', navToggle.checked);
+      };
+      if (navToggle) {
+        navToggle.addEventListener('change', syncNavOpen);
+        syncNavOpen();
+      }
     </script>
   </body>
 </html>
