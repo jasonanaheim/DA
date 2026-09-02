@@ -37,6 +37,10 @@ body {
   line-height: 1.6;
 }
 
+body.nav-open {
+  overflow: hidden;
+}
+
 img {
   max-width: 100%;
   display: block;
@@ -679,10 +683,24 @@ nav .icon-burger .line {
 }
 
 .gallery-grid img {
+  display: block;
+  width: 100%;
   border-radius: var(--radius-md);
   height: 220px;
   object-fit: cover;
   box-shadow: var(--shadow-soft);
+}
+
+@media (max-width: 720px) {
+  .gallery-grid {
+    grid-template-columns: minmax(0, 1fr);
+    justify-items: center;
+  }
+
+  .gallery-grid img {
+    width: min(100%, 360px);
+    margin-inline: auto;
+  }
 }
 
 .section-cta {
@@ -1381,7 +1399,8 @@ nav .icon-burger .line {
     justify-content: center;
   }
 
-  nav .links {
+  nav .links,
+  .hero-nav .links {
     float: none;
     position: fixed;
     z-index: 9;
@@ -1389,29 +1408,49 @@ nav .icon-burger .line {
     right: 0;
     top: 60px;
     bottom: 100%;
-    width: auto;
+    width: 100%;
     height: auto;
+    padding: 32px 24px max(32px, env(safe-area-inset-bottom));
     flex-direction: column;
-    justify-content: space-evenly;
-    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    gap: 8px;
+    background: linear-gradient(160deg, rgba(1, 28, 57, 0.98), rgba(13, 83, 124, 0.98));
     overflow: hidden;
     box-sizing: border-box;
-    transition: all 0.5s ease-in-out;
+    transition: bottom 0.35s ease-in-out, visibility 0.35s ease-in-out;
     visibility: hidden;
   }
 
-  nav .links a {
-    font-size: 20px;
-    color: white;
+  nav .links li {
+    width: min(100%, 360px);
   }
 
-  nav :checked ~ .links {
+  nav .links a,
+  .hero-nav .links a,
+  .hero-nav .links a.book-now {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 52px;
+    margin: 0;
+    padding: 10px 20px;
+    font-size: 20px;
+    color: white;
+    text-shadow: none;
+    border: 0;
+  }
+
+  nav :checked ~ .links,
+  .hero-nav :checked ~ .links {
     bottom: 0;
     visibility: visible;
   }
 
   nav .icon-burger {
     display: block;
+    z-index: 10;
+    cursor: pointer;
   }
 
   nav :checked ~ .icon-burger .line:nth-child(1) {

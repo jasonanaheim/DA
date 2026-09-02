@@ -4,45 +4,17 @@
     <meta charset="UTF-8">
     <meta name="description" content="Double A Detailing is a premium mobile detailing company serving Orange County. We come to your home or office with transparent pricing and easy booking.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="css/styleindex.css">
+    <link rel="stylesheet" type="text/css" href="css/styleindex.css?v=20260901-3">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800;900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:600,700,800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <script src="javascript/site-header.js?v=20260901-2" defer></script>
     <meta name="format-detection" content="telephone=no">
     <title>Double A Detailing - Premium Mobile Detailing in Orange County</title>
   </head>
 <body>
-    <header class="hero-header">
-      <div class="blueheader">
-        <div class="contactTop">
-          <div class="topIcon"><i class="fa fa-envelope"></i></div>
-          <div class="contactHeaderInfo">doubleadetailing@gmail.com</div>
-          |
-          <div class="phoneIcon"><i class="fa fa-phone"></i></div>
-          <div class="contactHeaderInfo">714-478-0556</div>
-        </div>
-      </div>
-      <nav class="hero-nav">
-        <input id="nav-toggle" type="checkbox" tabindex="0">
-        <a href="index.html" tabindex="0">
-          <img src="images/update - double a detailing logo.png" alt="Double A Detailing logo" class="logoImage">
-        </a>
-        <ul class="links">
-          <li><a href="html/pricing.html">Pricing</a></li>
-          <li><a href="html/gallery.html">Gallery</a></li>
-          <li><a href="html/aboutus.html">About</a></li>
-          <li><a href="html/contact.html">Contact</a></li>
-          <li><a href="html/faq.html">FAQ</a></li>
-          <li><a class="book-now" href="https://DoubleADetailing.as.me/">Book Now</a></li>
-        </ul>
-        <label for="nav-toggle" class="icon-burger" tabindex="0">
-          <div class="line"></div>
-          <div class="line"></div>
-          <div class="line"></div>
-        </label>
-      </nav>
-  </header>
+    <site-header></site-header>
 
     <main>
 
@@ -56,7 +28,7 @@
         </div>
         <div class="hero-buttons">
           <a class="hero-button primary" href="https://DoubleADetailing.as.me/">Book Now</a>
-          <a class="hero-button secondary" href="tel:7144780557">Call (714) 478‑0557</a>
+          <a class="hero-button secondary" href="tel:7144780556">Call (714) 478‑0556</a>
         </div>
       </section>
 
@@ -71,7 +43,7 @@
             <div class="step">
               <div class="step-icon"><i class="fas fa-calendar-check"></i></div>
               <h3>Schedule your appointment</h3>
-              <p><a href="https://DoubleADetailing.as.me/">Book online</a> or call us at <a href="tel:7144780557">(714-478-0557)</a>.</p>
+              <p><a href="https://DoubleADetailing.as.me/">Book online</a> or call us at <a href="tel:7144780556">(714-478-0556)</a>.</p>
             </div>
             <div class="step">
               <div class="step-icon"><i class="fas fa-car"></i></div>
@@ -481,27 +453,6 @@
       });
       updateSticky();
       updateFeatureToggles();
-    </script>
-    <script>
-      const hero = document.querySelector('.hero');
-      const navScrollToggle = () => {
-        if (!hero) return;
-        const heroBottom = hero.getBoundingClientRect().bottom;
-        document.body.classList.toggle('nav-scrolled', window.scrollY > 1);
-      };
-      window.addEventListener('scroll', navScrollToggle);
-      window.addEventListener('resize', navScrollToggle);
-      navScrollToggle();
-
-      const navToggle = document.getElementById('nav-toggle');
-      const syncNavOpen = () => {
-        if (!navToggle) return;
-        document.body.classList.toggle('nav-open', navToggle.checked);
-      };
-      if (navToggle) {
-        navToggle.addEventListener('change', syncNavOpen);
-        syncNavOpen();
-      }
     </script>
   </body>
 </html>
