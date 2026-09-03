@@ -1,5 +1,11 @@
 # About
 
+Approved plain-language heading update: hero eyebrow “About us”; H1 “Mobile detailing in Orange County”; story heading “Fast, reliable service. High-quality results.” Replaces the dramatic slogan and em dash without changing remaining copy, layout, service claims or booking behavior. Verify exact text and existing SEO checks.
+
+Approved compact hero adjustment: remove the 590px/430px minimum heights, reduce headline sizing and vertical padding toward the Contact introduction pattern, retaining desktop/mobile fixed-header clearance. Preserve photo, copy, story section and CTAs; use content-driven height so text is never clipped at narrow widths or zoom.
+
+Owner-approved hero photo preview: replace only the hero background with supplied `yum.jpg`, copied unchanged to `images/about-hero-cars.jpg`. Preserve story photo, copy, layout and booking. Use a lower vertical focal point to emphasize cars and keep the existing navy text overlay. Verify mobile/desktop crops and loading. Original-resolution asset is for local preview; optimized variants are not included in this change.
+
 Baseline: 2026-09-02; source `html/aboutus.html`, `css/styleabout.css`, shared header.
 
 ## Purpose

@@ -4,7 +4,7 @@ Baseline: application commit `a57b2ca`, September 2, 2026. Specification proposa
 
 Acuity remains the approved current booking provider; Square is deferred by the approved sources. Do not replace links, embed a new scheduler, or create booking infrastructure. Acceptance outcomes are PASS, FAIL, or NOT VERIFIED with evidence; never treat a blocked test as PASS.
 
-Status: BLOCKED for publishable metadata/policy by D2/D3; existing metadata preserved.
+Status update: owner approved the domain-independent preparation slice. See [SEO preparation](seo-preparation.md) for confirmed facts, exact scope and checks, and [domain activation](seo-domain-activation.md) for inactive canonical/social URL/sitemap/robots drafts. The historical baseline below is retained; domain-dependent publication remains gated.
 
 ## 1. Objective
 

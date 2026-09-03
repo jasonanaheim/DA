@@ -1,5 +1,7 @@
 # SEO
 
+Implementation update: [SEO preparation](../docs/specs/seo-preparation.md) records the approved domain-independent changes and privacy correction. [Domain activation](../docs/specs/seo-domain-activation.md) holds inactive URL/crawler drafts until the domain is connected. The baseline below predates this work.
+
 Baseline: 2026-09-02; source: all seven HTML files, shared header, CSS asset references, README, tracked-file inventory.
 
 ## Purpose

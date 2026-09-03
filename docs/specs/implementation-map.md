@@ -1,5 +1,12 @@
 # Implementation map — approved target versus existing website
 
+## Latest execution status (supersedes historical baseline below)
+
+- Shared navigation, native FAQs, gallery dialog resilience and contact changes were implemented in checkpoint `439ae89`; prior execution notes retain per-check limitations, including latest menu-position visual QA.
+- That checkpoint was pushed to GitHub main and Netlify linked to main; deployment and contact-form detection were verified during setup. Owner subsequently reported the form/email test worked. This is owner-reported receipt, not a new automated delivery test. Credential revocation and privacy/retention decisions remain open.
+- Phase 4: owner confirmed Orange County service area, existing public phone/email, current hours and private street address. [SEO preparation](seo-preparation.md) owns the current narrow slice; [domain activation](seo-domain-activation.md) stages canonical/social URLs and crawler files. Domain transfer is still pending; final canonical host and live verification remain gated. Legacy address removal is authorized, not broader legacy retirement or booking migration.
+- Analytics remains unselected; no instrumentation or Square migration is included. Baseline tables below are historical traceability, not current completion claims.
+
 Status: owner authorized core fixes on September 2, 2026; those local changes and verification are recorded in [core-fixes-execution.md](core-fixes-execution.md). **Overall readiness: BLOCKED for complete target-state implementation**, not for every individual slice. External-provider and business-dependent slices remain gated; this authorization is not approval to deploy or implement all unresolved work. The table below retains the original baseline traceability.
 
 Sources: [PRD](../PRD.md), [Engineering Document](../engineering/engineering-doc.md), actual repository at application commit `a57b2ca`, inspected September 2, 2026. Both source documents are approved by conversation; their on-disk draft/awaiting-approval labels are stale. They remain unchanged. Approval does not supply missing provider URLs, operational facts or account settings.

@@ -12,6 +12,26 @@ footer{padding:58px 0 20px;background:#071b2f;color:rgba(255,255,255,.72)}.foote
 
 .about-hero__content>p:not(.eyebrow){margin-bottom:0}
 
+/* Owner-supplied hero photo: emphasize the vehicles below the tree line. */
+.about-hero { min-height: 0; }
+.about-hero__content { padding: 170px 0 48px; }
+.about-hero h1 {
+  margin-bottom: 16px;
+  font-size: clamp(2.5rem, 4.5vw, 3.75rem);
+  line-height: 1.05;
+}
+.about-hero__image {
+  background-image: linear-gradient(90deg, rgba(1,28,57,.88) 4%, rgba(1,28,57,.55) 48%, rgba(1,28,57,.12)), url("../images/about-hero-cars.jpg");
+  background-position: center 72%;
+}
+@media (max-width: 600px) {
+  .about-hero__image { background-position: 64% center; }
+}
+@media (max-width: 720px) {
+  .about-hero__content { padding: 108px 0 36px; }
+  .about-hero h1 { font-size: clamp(2rem, 7.5vw, 2.75rem); }
+}
+
 /* Core accessibility and unenhanced navigation. */
 /* Preserve aspect ratio while intrinsic dimensions reserve loading space. */
 img { height: auto; }

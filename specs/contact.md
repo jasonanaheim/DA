@@ -1,5 +1,7 @@
 # Contact
 
+Approved wording update: rename the inquiry field label from “Contact Number” to “Phone Number” and match its placeholder. Preserve `id`/`name="number"`, telephone input type, required validation and Netlify payload. Verify with the existing contact-form tests.
+
 Baseline: 2026-09-02; source `html/contact.html`, `css/stylecontact.css`, `javascript/app.js`, SMTPJS and shared header.
 
 Implementation update: [Netlify contact rollout](../docs/specs/netlify-contact-rollout.md) supersedes the SMTP baseline below. The local form now uses Netlify-compatible markup and guarded AJAX with accessible status and preserved input. SMTPJS and credentials were removed from current source. Owner approved `jason.almaraz808@gmail.com` for dashboard notifications; live delivery is not yet configured or verified. Public contact details remain unchanged.
