@@ -1,33 +1,67 @@
-document.querySelector(".contact-form").addEventListener("submit", submitForm);
+(() => {
+  const form = document.querySelector('.contact-form');
+  if (!form) return;
 
-function submitForm(e){
-    e.preventDefault();
+  const status = document.getElementById('contact-status');
+  const submit = form.querySelector('[type="submit"]');
+  const approvedHosts = new Set([
+    'doubleadetailing.netlify.app',
+    'doubleadetailing.com',
+    'www.doubleadetailing.com',
+  ]);
+  const hosted = location.protocol === 'https:' && approvedHosts.has(location.hostname);
+  let pending = false;
 
-    // Get input values
-    let name = document.querySelector(".name").value;
-    let email = document.querySelector(".email").value;
-    let message = document.querySelector(".message").value;
-    let contactNumber = document.querySelector(".contactNumber").value;
-    let hearAbout = document.querySelector(".hearAbout").value;
+  function announce(message) {
+    status.textContent = message;
+  }
 
-    let carDetails = document.querySelector(".carDetails").value;
-    document.querySelector(".contact-form").reset();
+  if (!hosted) {
+    announce('Preview only: this form does not send inquiries here. Delivery must be tested on the configured Netlify site.');
+  }
 
-    sendEmail(name, email, message, contactNumber, carDetails,hearAbout, );
+  form.addEventListener('submit', async event => {
+    event.preventDefault();
+    if (pending || !form.reportValidity()) return;
+    if (!hosted) {
+      announce('Nothing was sent. This preview cannot deliver inquiries; your entries have been kept.');
+      return;
+    }
 
-}
+    const data = new FormData(form);
+    if (data.get('bot-field')) {
+      announce('Your inquiry could not be submitted. Please use the phone or email listed on this page.');
+      return;
+    }
 
-// Send Email Info
-// https://www.youtube.com/watch?v=i2eXkSKjl0A&ab_channel=RajsuthanOfficial
+    pending = true;
+    submit.disabled = true;
+    form.setAttribute('aria-busy', 'true');
+    announce('Submitting your inquiry…');
+    const controller = new AbortController();
+    const timeout = setTimeout(() => controller.abort(), 15000);
 
-function sendEmail(name, email, message, contactNumber, carDetails, hearAbout){
-    Email.send({
-        Host: "smtp.gmail.com",
-        Username: 'jason.almaraz808@gmail.com',
-        Password: "bcrwgnfcmxufumgv",
-        To: 'jason.almaraz808@gmail.com',
-        From: `${email}`,
-        Subject: `${name} sent you a message`, 
-        Body: `Name: ${name} <br/> Email: ${email} <br/> Contact Number: ${contactNumber} <br/> Car Details: ${carDetails} <br/> hearAbout: ${hearAbout} <br/> Message: ${message}`,
-    }).then((message) => alert("mail sent successfully") )
-}
+    try {
+      const response = await fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams(data).toString(),
+        signal: controller.signal,
+        redirect: 'error',
+      });
+
+      if (response.status === 200 && !response.redirected) {
+        announce('Your inquiry was submitted. This does not confirm a booking or email delivery. Your entries have been kept for reference.');
+      } else {
+        announce('We could not confirm your submission. Your entries have been kept. Please call or email us before trying again.');
+      }
+    } catch (error) {
+      announce('We could not confirm whether your inquiry was received. Your entries have been kept. Please call or email us before trying again.');
+    } finally {
+      clearTimeout(timeout);
+      pending = false;
+      submit.disabled = false;
+      form.setAttribute('aria-busy', 'false');
+    }
+  });
+})();

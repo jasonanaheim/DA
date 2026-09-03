@@ -1,0 +1,72 @@
+/* Shared Contact/FAQ shell; visual reference: About and Gallery. */
+:root {
+  --blue: #25a3ed;
+  --deep: #0d537c;
+  --navy: #011c39;
+  --cta: #2260ff;
+  --cyan: #00b6f0;
+  --ink: #30383f;
+  --muted: #68727c;
+  --mist: #f3f7fa;
+  --border: #dce6ec;
+  --body: "Open Sans", sans-serif;
+  --heading: "Nunito Sans", sans-serif;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { background: #fff; color: var(--ink); font-family: var(--body); line-height: 1.65; }
+img { display: block; max-width: 100%; height: auto; }
+a { color: inherit; text-decoration: none; }
+[hidden] { display: none !important; }
+.shell { width: min(1160px, 92vw); margin-inline: auto; }
+.hero-image {
+  background: linear-gradient(90deg, rgba(1,28,57,.94), rgba(1,28,57,.6)), url("../images/img-2.jpg") center 58% / cover;
+  color: #fff;
+}
+.hero-text { width: min(1160px, 92vw); margin: auto; padding: 200px 0 66px; }
+.hero-text h1 { margin-bottom: 16px; font: 900 clamp(2.75rem, 5vw, 4.5rem)/1.05 var(--heading); letter-spacing: -.04em; }
+.hero-text p { max-width: 660px; color: rgba(255,255,255,.85); font-size: 1.05rem; }
+.button, .contact-form [type="submit"] {
+  display: inline-flex; align-items: center; justify-content: center; min-height: 50px;
+  padding: 13px 26px; border: 1px solid transparent; border-radius: 999px;
+  font: 700 1rem/1.5 var(--body); cursor: pointer;
+  transition: transform .18s ease, box-shadow .18s ease;
+}
+.button:hover, .contact-form [type="submit"]:hover { transform: translateY(-2px); }
+.button--primary, .contact-form [type="submit"] { background: linear-gradient(135deg, var(--cta), var(--cyan)); color: #fff; box-shadow: 0 12px 28px rgba(34,96,255,.2); }
+.button--outline { border-color: rgba(255,255,255,.48); color: #fff; }
+.number { padding: 48px 0; background: linear-gradient(125deg, var(--deep), #087ab4); }
+.call-strip { display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+.site-footer { padding: 58px 0 20px; background: #071b2f; color: rgba(255,255,255,.72); }
+.footer-grid { display: grid; grid-template-columns: 1.5fr 1fr .7fr; gap: 50px; }
+.footer-grid > div { min-width: 0; }
+.footer-grid img { width: 220px; margin-bottom: 18px; }
+.footer-grid h3 { margin-bottom: 12px; color: #fff; font: 800 1.17rem/1.5 var(--heading); }
+.footer-grid a { display: block; width: fit-content; margin-bottom: 8px; overflow-wrap: anywhere; }
+.footer-grid a:hover { color: #fff; text-decoration: underline; text-underline-offset: 4px; }
+.footer-bottom { width: min(1160px,92vw); margin: 42px auto 0; padding-top: 18px; border-top: 1px solid rgba(255,255,255,.1); font-size: .82rem; text-align: center; }
+.site-nav-fallback { position: relative; z-index: 1001; display: flex; flex-wrap: wrap; justify-content: center; gap: 12px 22px; padding: 18px; background: #fff; color: var(--deep); font-weight: 700; }
+.site-nav-fallback a { padding: 8px; text-decoration: underline; }
+.skip-link { position: fixed; top: 8px; left: 8px; z-index: 2000; padding: 12px 18px; background: #fff; color: var(--navy); transform: translateY(-160%); }
+.skip-link:focus { transform: none; }
+:is(a, button, summary, input, textarea):focus-visible { outline: 3px solid var(--deep); outline-offset: 4px; box-shadow: 0 0 0 6px #fff; }
+#main-content, input, textarea, details { scroll-margin-top: 145px; }
+@media (max-width: 900px) {
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+  .footer-grid > div:first-child { grid-column: 1 / -1; }
+}
+@media (max-width: 720px) {
+  .hero-text { padding: 108px 0 42px; }
+  .hero-text p { font-size: .95rem; }
+  #main-content, input, textarea, details { scroll-margin-top: 78px; }
+}
+@media (max-width: 600px) {
+  .footer-grid { grid-template-columns: 1fr; gap: 28px; }
+  .footer-grid > div:first-child { grid-column: auto; }
+  .call-strip { flex-direction: column; }
+  .call-strip .button { width: 100%; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { transition: none !important; }
+}

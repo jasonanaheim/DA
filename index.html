@@ -4,19 +4,30 @@
     <meta charset="UTF-8">
     <meta name="description" content="Double A Detailing is a premium mobile detailing company serving Orange County. We come to your home or office with transparent pricing and easy booking.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="css/styleindex.css?v=20260901-3">
+    <link rel="stylesheet" type="text/css" href="css/styleindex.css?v=20260902-logo">
+    <link rel="stylesheet" href="css/faq-disclosures.css?v=20260902-1">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800;900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:600,700,800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
-    <script src="javascript/site-header.js?v=20260901-2" defer></script>
+    <script src="javascript/site-header.js?v=20260902-menu" defer></script>
     <meta name="format-detection" content="telephone=no">
     <title>Double A Detailing - Premium Mobile Detailing in Orange County</title>
   </head>
 <body>
-    <site-header></site-header>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+  <site-header></site-header>
+  <nav class="site-nav-fallback" aria-label="Primary navigation">
+    <a href="index.html">Home</a>
+    <a href="html/pricing.html">Pricing</a>
+    <a href="html/gallery.html">Gallery</a>
+    <a href="html/aboutus.html">About</a>
+    <a href="html/contact.html">Contact</a>
+    <a href="html/faq.html">FAQ</a>
+    <a href="https://DoubleADetailing.as.me/">Book Now</a>
+  </nav>
 
-    <main>
+    <main id="main-content" tabindex="-1">
 
       <section class="hero hero-skyline" aria-label="Premium mobile detailing">
         <div class="hero-media" aria-label="Orange County skyline with vehicle"></div>
@@ -208,7 +219,7 @@
             <p>We’re a fully mobile detailing team based in OC. If you’re near Irvine, Costa Mesa, Anaheim, Newport Beach, Tustin, or surrounding areas, we’ll come to you.</p>
           </header>
           <div class="service-map-card">
-            <iframe loading="lazy" allowfullscreen
+            <iframe title="Orange County service area map" loading="lazy" allowfullscreen
               src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDmXEecIEcXLo08N4dXc46VgUngr5mAmRY&q=Orange%20County%2C%20CA">
             </iframe>
           </div>
@@ -224,9 +235,9 @@
             <p>Fresh finishes, clean interiors, and details that hold up.</p>
           </header>
           <div class="gallery-grid">
-            <img src="images/gallery1.jpg" alt="Exterior detail result">
-            <img src="images/gallery4.jpg" alt="Interior detail result">
-            <img src="images/gallery6.jpg" alt="Detailing closeup">
+            <img width="1000" height="750" src="images/gallery1.jpg" alt="Exterior detail result">
+            <img width="1000" height="750" src="images/gallery4.jpg" alt="Interior detail result">
+            <img width="1000" height="750" src="images/gallery6.jpg" alt="Detailing closeup">
           </div>
           <div class="section-cta">
             <a class="btn btn-secondary" href="html/gallery.html">View Full Gallery</a>
@@ -248,7 +259,7 @@
               <div class="review-footer">
                 <span>Steve F</span>
                 <div class="stars">★★★★★</div>
-                <img class="review-avatar" src="images/steve.jpg" alt="Steve F">
+                <img width="348" height="348" class="review-avatar" src="images/steve.jpg" alt="Steve F">
               </div>
             </article>
             <article class="review-card">
@@ -257,7 +268,7 @@
               <div class="review-footer">
                 <span>Sean M</span>
                 <div class="stars">★★★★★</div>
-                <img class="review-avatar" src="images/sean.jpg" alt="Sean M">
+                <img width="348" height="348" class="review-avatar" src="images/sean.jpg" alt="Sean M">
               </div>
             </article>
             <article class="review-card">
@@ -266,7 +277,7 @@
               <div class="review-footer">
                 <span>Jeff S</span>
                 <div class="stars">★★★★★</div>
-                <img class="review-avatar" src="images/jeff.jpg" alt="Jeff S">
+                <img width="348" height="348" class="review-avatar" src="images/jeff.jpg" alt="Jeff S">
               </div>
             </article>
           </div>
@@ -277,13 +288,11 @@
       </section>
 
       <!-- ====================== FAQ ====================== -->
-      <section class="container" data-aos="fade-up">
+      <section class="home-faq">
         <h2 class="sectionHeading"> Frequently Asked Questions </h2>
-        <div class="space_to_accordion"></div>
         <div class="accordion">
-          <div>
-            <input type="checkbox" name="example_accordion" id="section1" class="accordion__input">
-            <label for="section1" class="accordion__label">How does it work?</label>
+          <details id="section1">
+            <summary class="accordion__label">How does it work?</summary>
             <div class="accordion__content">
               <p>
                 We are a mobile car wash service. We send our team of detailers to your location, whether you're at home, work, or anywhere.<br><br>
@@ -291,37 +300,34 @@
                 Depending on your booking, we will request access to your keys in order to do additional interior cleaning. When they finish they will notify you when it is done, return your keys, and take any payments as necessary.
               </p>
             </div>
-          </div>
+          </details>
         </div>
 
         <div class="accordion">
-          <div>
-            <input type="checkbox" name="example_accordion" id="section2" class="accordion__input">
-            <label for="section2" class="accordion__label">Where are your services available?</label>
+          <details id="section2">
+            <summary class="accordion__label">Where are your services available?</summary>
             <div class="accordion__content">
               <p>
                 We are 100% self-supplied with power and water. This allows us to send our mobile units anywhere, whether its your home, apartment, work place, etc. We operate in the Greater Orange County area. We can make exceptions for clients further than our normal range, just contact us for details!
               </p>
             </div>
-          </div>
+          </details>
         </div>
 
         <div class="accordion">
-          <div>
-            <input type="checkbox" name="example_accordion" id="section3" class="accordion__input">
-            <label for="section3" class="accordion__label">Can you remove stains from my interior?</label>
+          <details id="section3">
+            <summary class="accordion__label">Can you remove stains from my interior?</summary>
             <div class="accordion__content">
               <p>
                 Yes, we are able to remove the high majority of stains from spills to dirt, grime, and grease stains of all sorts of surfaces including capret, cloth, leather, and vinyl.
               </p>
             </div>
-          </div>
+          </details>
         </div>
 
         <div class="accordion">
-          <div>
-            <input type="checkbox" name="example_accordion" id="section4" class="accordion__input">
-            <label for="section4" class="accordion__label">Do I need to be present before, during, or after the service?</label>
+          <details id="section4">
+            <summary class="accordion__label">Do I need to be present before, during, or after the service?</summary>
             <div class="accordion__content">
               <p>
                 The detailer will contact you be text or phone when they arridve. If you choose not to be present for the arrival of the detailer, please ensure the detailer can easily find your car by indicating the plate or the exact color and model when placing the booking. <br><br>
@@ -329,19 +335,18 @@
                 We strongly recommend checking the vehicle after the detailer has completed the service to ensure you're throughly satisfied with the end result!
               </p>
             </div>
-          </div>
+          </details>
         </div>
 
         <div class="accordion">
-          <div>
-            <input type="checkbox" name="example_accordion" id="section5" class="accordion__input">
-            <label for="section5" class="accordion__label">What is the difference between a wash and a detail?</label>
+          <details id="section5">
+            <summary class="accordion__label">What is the difference between a wash and a detail?</summary>
             <div class="accordion__content">
               <p>
                 Both services will look to maintain your vehicle to have that "new car" look. However a detailing will cater to the intricate needs of your vehicle. We recommend detailing your car every month or so to keep it looking fresh. Once you detail your car it makes it much easier to maintain the cleaniliness with subsequent regular washes.
               </p>
             </div>
-          </div>
+          </details>
         </div>
         <div class="section-cta">
           <a class="btn btn-secondary" href="html/faq.html">View Full FAQ</a>
@@ -374,7 +379,7 @@
     <footer class="footer">
       <div class="footer-inner">
         <div>
-          <img src="images/update - white double a detailing logo.png" alt="Double A Detailing" class="footer-logo">
+          <img width="1600" height="500" src="images/update - white double a detailing logo.png" alt="Double A Detailing" class="footer-logo">
           <p>Premium mobile detailing in Orange County.</p>
         </div>
         <div>
