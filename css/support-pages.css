@@ -20,8 +20,18 @@ a { color: inherit; text-decoration: none; }
 [hidden] { display: none !important; }
 .shell { width: min(1160px, 92vw); margin-inline: auto; }
 .hero-image {
-  background: linear-gradient(90deg, rgba(1,28,57,.94), rgba(1,28,57,.6)), url("../images/img-2.jpg") center 58% / cover;
+  background: linear-gradient(90deg, rgba(1,28,57,.94), rgba(1,28,57,.6)), var(--wash-photo) center 58% / cover;
   color: #fff;
+}
+
+/* Responsive photo derivatives; originals retained in images/. */
+:root {
+  --wash-photo: url("../images/optimized/wash-detail-1600.webp");
+}
+@media (max-width: 720px) {
+  :root {
+    --wash-photo: url("../images/optimized/wash-detail-960.webp");
+  }
 }
 .hero-text { width: min(1160px, 92vw); margin: auto; padding: 200px 0 66px; }
 .hero-text h1 { margin-bottom: 16px; font: 900 clamp(2.75rem, 5vw, 4.5rem)/1.05 var(--heading); letter-spacing: -.04em; }

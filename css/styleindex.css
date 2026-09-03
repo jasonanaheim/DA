@@ -385,8 +385,22 @@ nav .icon-burger .line {
 .hero-media {
   position: absolute;
   inset: 0;
-  background: #000 url("../images/anaheim hero 4.png") center 65%/cover no-repeat;
+  background: #000 var(--home-hero-photo) center 65%/cover no-repeat;
   overflow: hidden;
+}
+
+/* Responsive photo derivatives; originals retained in images/. */
+:root {
+  --home-hero-photo: url("../images/optimized/home-hero-1536.webp");
+  --wash-photo: url("../images/optimized/wash-detail-1600.webp");
+  --full-photo: url("../images/optimized/full-detail-1200.webp");
+}
+@media (max-width: 720px) {
+  :root {
+    --home-hero-photo: url("../images/optimized/home-hero-960.webp");
+    --wash-photo: url("../images/optimized/wash-detail-960.webp");
+    --full-photo: url("../images/optimized/full-detail-800.webp");
+  }
 }
 
 .hero-media::after {

@@ -2,6 +2,8 @@
 
 ## Latest execution status (supersedes historical baseline below)
 
+- Phase 5 image slice: [image optimization](image-optimization.md) records 12 local WebP derivatives from six unchanged originals, responsive selection and below-fold lazy loading. No analytics, host changes or new deployment included. File-size savings verified; real-user timing remains unmeasured.
+
 - Shared navigation, native FAQs, gallery dialog resilience and contact changes were implemented in checkpoint `439ae89`; prior execution notes retain per-check limitations, including latest menu-position visual QA.
 - That checkpoint was pushed to GitHub main and Netlify linked to main; deployment and contact-form detection were verified during setup. Owner subsequently reported the form/email test worked. This is owner-reported receipt, not a new automated delivery test. Credential revocation and privacy/retention decisions remain open.
 - Phase 4: owner confirmed Orange County service area, existing public phone/email, current hours and private street address. [SEO preparation](seo-preparation.md) owns the current narrow slice; [domain activation](seo-domain-activation.md) stages canonical/social URLs and crawler files. Domain transfer is still pending; final canonical host and live verification remain gated. Legacy address removal is authorized, not broader legacy retirement or booking migration.
