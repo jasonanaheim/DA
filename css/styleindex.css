@@ -906,9 +906,10 @@ nav .icon-burger .line {
   margin-bottom: 12px;
 }
 
-.footer h4 {
-  margin-bottom: 10px;
+.footer h3 {
+  margin: 1.33em 0 10px;
   font-family: var(--font-heading);
+  font-size: 1em;
 }
 
 .footer a {

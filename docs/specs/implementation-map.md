@@ -2,14 +2,16 @@
 
 ## Latest execution status (supersedes historical baseline below)
 
-- Phase 5 analytics slice: owner selected GA4 (`G-9N49QPVB24`) and approved prior consent with no advertising features. [GA4 analytics](ga4-analytics.md) defines the six-page implementation, bounded events and remaining live verification. Legacy Book Now and completed-booking attribution remain excluded.
+- Phase 6 current-core verification: [cross-page regression and accessibility audit](final-regression-audit.md) records PASS across the six active pages at the approved viewport matrix, keyboard interactions and proportional failure checks. The audit corrected one Home footer heading-level gap. Physical-device/screen-reader/native-zoom certification, completed booking and final-domain indexing remain NOT VERIFIED.
+
+- Phase 5 analytics slice: GA4 (`G-9N49QPVB24`) is deployed on the six active pages behind prior consent. [GA4 analytics](ga4-analytics.md) records pre-consent blocking, successful production `page_view` delivery and persistence. Legacy Book Now and completed-booking attribution remain excluded.
 
 - Phase 5 image slice: [image optimization](image-optimization.md) records 12 local WebP derivatives from six unchanged originals, responsive selection and below-fold lazy loading. No analytics, host changes or new deployment included. File-size savings verified; real-user timing remains unmeasured.
 
 - Shared navigation, native FAQs, gallery dialog resilience and contact changes were implemented in checkpoint `439ae89`; prior execution notes retain per-check limitations, including latest menu-position visual QA.
 - That checkpoint was pushed to GitHub main and Netlify linked to main; deployment and contact-form detection were verified during setup. Owner subsequently reported the form/email test worked. This is owner-reported receipt, not a new automated delivery test. Credential revocation and privacy/retention decisions remain open.
 - Phase 4: owner confirmed Orange County service area, existing public phone/email, current hours and private street address. [SEO preparation](seo-preparation.md) owns the current narrow slice; [domain activation](seo-domain-activation.md) stages canonical/social URLs and crawler files. Domain transfer is still pending; final canonical host and live verification remain gated. Legacy address removal is authorized, not broader legacy retirement or booking migration.
-- Analytics remains unselected; no instrumentation or Square migration is included. Baseline tables below are historical traceability, not current completion claims.
+- GA4 consent-aware instrumentation is implemented; Square migration is not included. Baseline tables below are historical traceability, not current completion claims.
 
 Status: owner authorized core fixes on September 2, 2026; those local changes and verification are recorded in [core-fixes-execution.md](core-fixes-execution.md). **Overall readiness: BLOCKED for complete target-state implementation**, not for every individual slice. External-provider and business-dependent slices remain gated; this authorization is not approval to deploy or implement all unresolved work. The table below retains the original baseline traceability.
 
@@ -17,7 +19,7 @@ Sources: [PRD](../PRD.md), [Engineering Document](../engineering/engineering-doc
 
 ## Authority and scope
 
-September 2 provider/domain update: owner confirmed `doubleadetailing.com`, existing host `doubleadetailing.netlify.app`, and Netlify Forms/test recipient. See [Netlify contact rollout](netlify-contact-rollout.md) for the local implementation and remaining release gates. D1 provider selection is resolved, not its live verification/privacy/retention gates; D3 domain naming is resolved, not DNS/hosting/SEO deployment. Analytics remains unselected.
+September 2 provider/domain update: owner confirmed `doubleadetailing.com`, existing host `doubleadetailing.netlify.app`, and Netlify Forms/test recipient. See [Netlify contact rollout](netlify-contact-rollout.md) for the implementation and release evidence. D1 provider selection and owner-reported receipt are resolved, while privacy/retention and old-credential revocation remain owner actions; D3 domain naming is resolved, not DNS/hosting/SEO activation. GA4 selection and the bounded six-page implementation are recorded in [GA4 analytics](ga4-analytics.md).
 
 Product intent → approved engineering design → these implementation delta specs → this map's execution/verification traceability → later code → recorded verification.
 
@@ -111,7 +113,7 @@ Approval of the Engineering Document resolves its architectural recommendations 
 | D2 | Authoritative coverage/hub/adjacent areas, hours/holidays, public contact/address, package scope/starting-price interpretation, policy wording, proof permissions; record exact replacements | Content fact changes, local SEO/schema; legacy facts additionally D4 | Price parity checks, existing layout preservation, semantic FAQ repair |
 | D3 | Actual production host/domain/HTTPS/canonical path and indexing policy; supported host config mechanism; cache/header/compression/404 settings; Maps-key owner/restrictions; approved metadata/social values/images | Publishable canonical/robots/sitemap/social output, hosting/security configuration and proof of production behavior | Local exact-case repairs, native UI changes, dimension attributes |
 | D4 | Square readiness/exact owner URL, explicit migration scope, legacy booking route lifecycle and rollback policy | Square switch and test; legacy route retirement/redirect/contact/stylesheet remediation | Approved current Acuity anchors and all nonmigration work; legacy header fallback only |
-| D5 | Analytics vendor/account/public config and consent/session/attribution/reporting rules; qualification and provider-confirmed data access | Any instrumentation, session denominators, credible completed-booking North Star | Vendor-neutral event contract, all real user actions and local tests |
+| D5 | **RESOLVED for bounded website measurement:** GA4 `G-9N49QPVB24`, prior consent and non-advertising behavior are implemented and production `page_view` delivery is verified. Provider-completed booking access/attribution remains unresolved. | Completed-booking North Star attribution only | Existing page-view, Book Now click, contact click and Gallery-open instrumentation |
 | D6 | Supported browser versions/certification matrix and optional test/lint tooling if needed | Final complete browser-support certification or new tooling installation | Manual tests in available browsers and core implementation using native APIs |
 | D7 | Reproducible active-page measurement profile/baseline and exact approved asset/dependency optimization manifest; budgets if desired | Specific binary variants/dependency upgrades/removals/caching optimization promises not proven by source | Confirmed path corrections, accurate image dimensions, resource-failure checks |
 
