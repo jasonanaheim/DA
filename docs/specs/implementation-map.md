@@ -2,6 +2,8 @@
 
 ## Latest execution status (supersedes historical baseline below)
 
+- Phase 5 analytics slice: owner selected GA4 (`G-9N49QPVB24`) and approved prior consent with no advertising features. [GA4 analytics](ga4-analytics.md) defines the six-page implementation, bounded events and remaining live verification. Legacy Book Now and completed-booking attribution remain excluded.
+
 - Phase 5 image slice: [image optimization](image-optimization.md) records 12 local WebP derivatives from six unchanged originals, responsive selection and below-fold lazy loading. No analytics, host changes or new deployment included. File-size savings verified; real-user timing remains unmeasured.
 
 - Shared navigation, native FAQs, gallery dialog resilience and contact changes were implemented in checkpoint `439ae89`; prior execution notes retain per-check limitations, including latest menu-position visual QA.

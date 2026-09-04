@@ -6,8 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="format-detection" content="telephone=no">
   <link rel="stylesheet" href="../css/stylegallery.css?v=20260901-1">
+  <link rel="stylesheet" href="../css/analytics.css?v=20260903-1">
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Nunito+Sans:wght@700;800;900&display=swap" rel="stylesheet">
   <script src="../javascript/site-header.js?v=20260902-menu" defer></script>
+  <script src="../javascript/analytics.js?v=20260903-1" defer></script>
   <title>Gallery | Double A Detailing</title>
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Double A Detailing">
@@ -74,6 +76,9 @@
           status.hidden = false;
           status.textContent = 'Loading image…';
           lightbox.showModal();
+          window.daAnalytics?.track('gallery_image_open', {
+            image_key: item.dataset.image.split('/').pop().replace(/\.[^.]+$/, ''),
+          });
 
           // Each request owns its loader; late events cannot replace a newer photo.
           const loader = new Image();

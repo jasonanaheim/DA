@@ -4,7 +4,7 @@ Baseline: application commit `a57b2ca`, September 2, 2026. Specification proposa
 
 Acuity remains the approved current booking provider; Square is deferred by the approved sources. Do not replace links, embed a new scheduler, or create booking infrastructure. Acceptance outcomes are PASS, FAIL, or NOT VERIFIED with evidence; never treat a blocked test as PASS.
 
-Status: BLOCKED for instrumentation by D5; event definitions ready for review, no vendor selected.
+Status update: D5 is resolved for this slice. Owner approved GA4 Measurement ID `G-9N49QPVB24` with privacy-first prior consent and no advertising features on September 3, 2026. [GA4 implementation](ga4-analytics.md) supersedes the vendor-blocked baseline below for the six marketing pages. Legacy Book Now, provider-completed booking reporting, legal certification, retention policy and targets remain unresolved.
 
 ## 1. Objective
 

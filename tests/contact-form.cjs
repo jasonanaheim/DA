@@ -20,6 +20,7 @@ function setup(options = {}) {
   let handler;
   let timer;
   const calls = [];
+  const analytics = [];
   const form = {
     querySelector: () => button,
     reportValidity: () => options.valid !== false,
@@ -31,7 +32,7 @@ function setup(options = {}) {
     constructor() { this.signal = { aborted: false }; }
     abort() { this.signal.aborted = true; if (this.signal.onabort) this.signal.onabort(); }
   }
-  vm.runInNewContext(source, {
+  const context = {
     document: { querySelector: () => form, getElementById: () => status },
     location: { protocol: 'https:', hostname: options.host || 'doubleadetailing.netlify.app' },
     FormData: class extends Map { constructor() { super(values); } },
@@ -42,9 +43,12 @@ function setup(options = {}) {
       calls.push({ url, init });
       return options.respond ? options.respond(init) : Promise.resolve({ status: 200, redirected: false });
     },
-  });
+    daAnalytics: { track: (name, properties) => analytics.push({ name, properties }) },
+  };
+  context.window = context;
+  vm.runInNewContext(source, context);
   return { values, status, button, attributes, calls,
-    submit: () => handler({ preventDefault() {} }), timeout: () => timer() };
+    analytics, submit: () => handler({ preventDefault() {} }), timeout: () => timer() };
 }
 
 (async () => {
@@ -72,6 +76,10 @@ function setup(options = {}) {
     assert.match(test.status.textContent, /inquiry was submitted/);
     assert.equal(test.button.disabled, false);
     assert.equal(test.attributes['aria-busy'], 'false');
+    assert.equal(test.analytics.length, 2);
+    assert.equal(test.analytics[0].name, 'contact_submit_attempt');
+    assert.equal(test.analytics[1].name, 'contact_submit_result');
+    assert.equal(test.analytics[1].properties.result, 'unknown');
   }
   for (const response of [{ status: 400 }, { status: 500 }, { status: 204 }, { status: 200, redirected: true }]) {
     const test = setup({ respond: () => Promise.resolve(response) });

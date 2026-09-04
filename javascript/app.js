@@ -35,6 +35,7 @@
     }
 
     pending = true;
+    window.daAnalytics?.track('contact_submit_attempt');
     submit.disabled = true;
     form.setAttribute('aria-busy', 'true');
     announce('Submitting your inquiry…');
@@ -51,11 +52,14 @@
       });
 
       if (response.status === 200 && !response.redirected) {
+        window.daAnalytics?.track('contact_submit_result', { result: 'unknown' });
         announce('Your inquiry was submitted. This does not confirm a booking or email delivery. Your entries have been kept for reference.');
       } else {
+        window.daAnalytics?.track('contact_submit_result', { result: 'error' });
         announce('We could not confirm your submission. Your entries have been kept. Please call or email us before trying again.');
       }
     } catch (error) {
+      window.daAnalytics?.track('contact_submit_result', { result: 'error' });
       announce('We could not confirm whether your inquiry was received. Your entries have been kept. Please call or email us before trying again.');
     } finally {
       clearTimeout(timeout);
