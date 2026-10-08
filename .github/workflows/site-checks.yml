@@ -1,0 +1,36 @@
+name: Site checks
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: site-checks-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  site-checks:
+    name: Site checks
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Existing regression tests
+        run: |
+          node tests/contact-form.cjs
+          node tests/analytics.cjs
+          node tests/seo.cjs
+      - name: Authored JavaScript syntax
+        run: |
+          for file in javascript/*.js; do
+            case "$file" in
+              javascript/jquery3.3.1.js|javascript/lightslider.js) continue ;;
+            esac
+            node --check "$file"
+          done
+      - name: Local links and assets
+        run: node tests/local-links.cjs
