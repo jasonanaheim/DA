@@ -65,3 +65,5 @@ Existing title names Double A, mobile detailing, and Orange County; description 
 ## Out of scope
 
 Hero/copy redesign, review replacement, pricing changes, analytics installation, Maps-key changes, custom booking, or automatic repair of the documented accessibility gaps.
+
+October 7, 2026: Customize your detail add-ons are retained in an inert template pending owner confirmation, matching Pricing. See the approved change in pricing.md.

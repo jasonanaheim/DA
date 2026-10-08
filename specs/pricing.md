@@ -84,3 +84,7 @@ Price changes, new packages, guarantees, dynamic quoting, external booking migra
 ## Approved price update — October 7, 2026
 
 Owner approved sedan/SUV prices: Premium Full Detail $200/$250; Standard Full Detail $150/$180; Standard Interior $120/$150; Wash & Wax $120/$150. Update Home and Pricing, including Home starts-at labels. Motorcycle prices, add-ons, service inclusions and Acuity remain unchanged. Deliver a pull-request preview for review, not a production merge. Verify amounts match on both pages and existing checks pass.
+
+## Add-ons awaiting owner confirmation — October 7, 2026
+
+Requested scope: hide the Customize your detail section on Home and Pricing until the owner confirms its offerings. Preserve the markup in an inert HTML template for restoration; no customer-facing placeholder. Package pricing, inclusions, specialty quotes and Acuity remain unchanged. Verify the section is absent from rendered content on both pages and run existing checks. Deliver a preview before publishing. The add-on table above is retained reference content, not an approved public offering.
