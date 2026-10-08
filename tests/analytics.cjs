@@ -65,18 +65,18 @@ assert.strictEqual(undecided.appendedScripts.length, 1, 'one Google script after
 assert.strictEqual(undecided.appendedScripts[0].src,
   'https://www.googletagmanager.com/gtag/js?id=G-9N49QPVB24');
 assert.strictEqual(undecided.context.dataLayer.length, 3, 'consent, js and config only');
-undecided.context.daAnalytics.track('book_now_click', { placement: 'hero', booking_provider: 'acuity' });
+undecided.context.daAnalytics.track('book_now_click', { placement: 'hero', booking_provider: 'square' });
 assert.strictEqual(undecided.context.dataLayer.length, 4);
 const bookingAnchor = {
   tagName: 'A',
-  getAttribute: () => 'https://DoubleADetailing.as.me/',
+  getAttribute: () => 'https://book.squareup.com/appointments/44gms204616cty/location/LER7N49PR71JM/services',
   closest: () => null,
 };
 undecided.listeners.click({ composedPath: () => [bookingAnchor, { tagName: 'SITE-HEADER' }] });
 const bookingEvent = undecided.context.dataLayer[4];
 assert.strictEqual(bookingEvent[1], 'book_now_click');
 assert.deepStrictEqual(JSON.parse(JSON.stringify(bookingEvent[2])), {
-  page_path: '/', placement: 'header', booking_provider: 'acuity',
+  page_path: '/', placement: 'header', booking_provider: 'square',
 });
 
 const declined = run('declined');
