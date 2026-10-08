@@ -24,10 +24,10 @@ Existing amounts, not newly verified quotes:
 
 | Package | Sedan/Coupe | SUV/Truck | Motorcycle | Estimated time |
 | --- | --- | --- | --- | --- |
-| Premium Full Detail | $209 | $249 | $120 | 60–75 min |
-| Standard Full Detail | $159 | $179 | $50 | 40–60 min |
-| Standard Interior | $129 | $149 | Not listed | 40–60 min |
-| Wash & Wax Detail | $79 | $89 | $120 | 30–40 min |
+| Premium Full Detail | $200 | $250 | $120 | 60–75 min |
+| Standard Full Detail | $150 | $180 | $50 | 40–60 min |
+| Standard Interior | $120 | $150 | Not listed | 40–60 min |
+| Wash & Wax Detail | $120 | $150 | $120 | 30–40 min |
 
 Premium has Most Popular badge. Preserve service descriptions/inclusions as implemented; do not infer that generic interior inclusions apply to motorcycles. The source disclaimer says final pricing may vary with size/condition and adjustments are confirmed before service.
 
@@ -80,3 +80,7 @@ Existing Pricing title, tailored local-service description, one H1. No product/o
 ## Out of scope
 
 Price changes, new packages, guarantees, dynamic quoting, external booking migration, checkout, or redesign.
+
+## Approved price update — October 7, 2026
+
+Owner approved sedan/SUV prices: Premium Full Detail $200/$250; Standard Full Detail $150/$180; Standard Interior $120/$150; Wash & Wax $120/$150. Update Home and Pricing, including Home starts-at labels. Motorcycle prices, add-ons, service inclusions and Acuity remain unchanged. Deliver a pull-request preview for review, not a production merge. Verify amounts match on both pages and existing checks pass.
