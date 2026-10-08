@@ -244,7 +244,7 @@ class SiteHeader extends HTMLElement {
             ${pageLinks.map(([key, label, href]) => `
               <li><a class="nav-link${activePage === key ? ' active' : ''}" href="${href}"${activePage === key ? ' aria-current="page"' : ''}>${label}</a></li>
             `).join('')}
-            <li><a class="book-now" href="https://DoubleADetailing.as.me/">Book Now</a></li>
+            <li><a class="book-now" href="https://book.squareup.com/appointments/44gms204616cty/location/LER7N49PR71JM/services">Book Now</a></li>
           </ul>
           <button class="menu-button" type="button" aria-label="Open navigation menu" aria-controls="site-navigation" aria-expanded="false">
             <span class="menu-line"></span>

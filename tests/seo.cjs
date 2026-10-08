@@ -55,7 +55,8 @@ assert.deepStrictEqual(JSON.parse(blocks[0][1]), {
 
 const legacy = read('html/booknow.html');
 assert(!/Hampshire/i.test(legacy), 'private street address removed');
-assert(legacy.includes('https://app.acuityscheduling.com/schedule.php?owner=21786409'));
+assert(legacy.includes('https://book.squareup.com/appointments/44gms204616cty/location/LER7N49PR71JM/services'));
+assert(!legacy.includes('acuityscheduling.com'));
 assert(!fs.existsSync(path.join(root, 'sitemap.xml')), 'sitemap activation is gated');
 assert(!fs.existsSync(path.join(root, 'robots.txt')), 'robots activation is gated');
 const draft = read('docs/specs/seo-domain-activation.md');

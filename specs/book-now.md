@@ -66,3 +66,7 @@ Legacy page has a Book Now title and generic description, no H1, no canonical/no
 ## Out of scope
 
 Square migration/setup now; provider account management; scheduling/payment APIs; custom booking forms; account systems; deleting the legacy page; unapproved redirect or analytics behavior.
+
+## Approved Square migration — October 7, 2026
+
+User supplied and approved https://book.squareup.com/appointments/44gms204616cty/location/LER7N49PR71JM/services. This supersedes the earlier Acuity hold. Replace all website booking CTAs, including shared navigation and fallback links. Replace the legacy Acuity iframe with a direct Square booking link. Preserve same-tab behavior; no service preselection or external account modifications. Update consent-gated outbound analytics to identify Square. Validate tests and provider handoff without booking. Deliver a preview before publication.

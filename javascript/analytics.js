@@ -92,10 +92,10 @@
     if (!anchor) return;
     const href = anchor.getAttribute('href') || '';
     const where = placement(anchor, path);
-    if (/^https:\/\/DoubleADetailing\.as\.me\/?$/i.test(href)) {
+    if (href === 'https://book.squareup.com/appointments/44gms204616cty/location/LER7N49PR71JM/services') {
       const card = anchor.closest('.menu-item, .package-card');
       const heading = card && card.querySelector('h3');
-      const properties = { placement: where, booking_provider: 'acuity' };
+      const properties = { placement: where, booking_provider: 'square' };
       if (heading) properties.package_key = heading.textContent.trim().toLowerCase().replace(/[^a-z0-9]+/g, '_').replace(/^_|_$/g, '');
       track('book_now_click', properties);
     } else if (href.startsWith('tel:') || href.startsWith('mailto:')) {
